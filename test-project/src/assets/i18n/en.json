@@ -1,0 +1,12 @@
+{
+    "home": {
+    "loginTitle": "Home page",
+    "username": "Username",
+    "email": "Email",
+    "age": "Age"
+    },
+    
+    "settings": {
+    "title": "Settings page"
+    }
+    }

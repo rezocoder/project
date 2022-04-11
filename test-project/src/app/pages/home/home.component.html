@@ -1,0 +1,58 @@
+<div class="home">
+    <div class="lang">
+        <div class="en" (click)="changeDefaultLanguage('en')"></div>
+        <div class="geo" (click)="changeDefaultLanguage('ka')"></div>
+        </div>
+    
+    
+        <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)" name="name" autocomplete="off">
+            <h3 translate>home.loginTitle</h3>
+    
+            <label for="username" translate>home.username</label>
+            <input 
+                type="text" 
+                required 
+                minlength="4"
+                pattern="[a-zA-Z]+$"
+                #name="ngModel" 
+                placeholder="Email or Phone" 
+                id="username" 
+                name="name" 
+                ngModel>
+            <br><span *ngIf="name.invalid && name.touched">Enter a valid input</span>
+
+            <label for="email" translate>home.email</label>
+            <input 
+                type="email" 
+                required 
+                minlength="8"
+                email
+                #email="ngModel" 
+                placeholder="Email or Phone" 
+                id="username" 
+                name="email" 
+                ngModel>
+            <br><span *ngIf="email.invalid && email.touched">Enter a valid input</span>
+    
+            <label for="password" translate>home.age</label>
+            <input 
+                type="number" 
+                required 
+                #age="ngModel" 
+                placeholder="Password" 
+                id="age" 
+                name="age" 
+                ngModel>
+            <br><span *ngIf="age.invalid && age.touched">Enter a valid input</span>
+    
+            <button
+                ngClass="loginForm.invalid"  
+                [disabled]="loginForm.invalid" 
+                routerLink="/settings" 
+                type="button" 
+                (click)="loginUser(loginForm.value)" 
+            >
+                    Log In
+                </button>
+        </form>
+</div>

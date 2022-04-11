@@ -1,0 +1,11 @@
+{
+    "home": {
+    "loginTitle": "ავტორიზაცია",
+    "username": "სახელი",
+    "email": "მეილი",
+    "age": "ასაკი"
+    },
+    "settings": {
+    "title": "Page Paramètres"
+    }
+    }
